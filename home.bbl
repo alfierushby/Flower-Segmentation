@@ -1,0 +1,683 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{nilsbackVisualVocabularyFlower2006}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=9517fe036b6d54c1416c069edef3fb3a}{%
+           family={Nilsback},
+           familyi={N\bibinitperiod},
+           given={M.-E},
+           giveni={M\bibinithyphendelim E\bibinitperiod}}}%
+        {{hash=e77fd9dd5d9af3c798867760f8828744}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{fullhash}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{fullhashraw}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{bibnamehash}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{authorbibnamehash}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{authornamehash}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{authorfullhash}{07f0af96572811abb014fa0de39ff2d2}
+      \strng{authorfullhashraw}{07f0af96572811abb014fa0de39ff2d2}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate to what extent bag of visual words models can be used to distinguish categories which have significant visual similarity. To this end we develop and optimize a nearest neighbour classifier architecture, which is evaluated on a very challenging database of flower images. The flower categories are chosen to be indistinguishable on colour alone (for example), and have considerable variation in shape, scale, and viewpoint. We demonstrate that by developing a visual vocabulary that explicitly represents the various aspects (colour, shape, and texture) that distinguish one flower from another, we can overcome the ambiguities that exist between flower categories. The novelty lies in the vocabulary used for each aspect, and how these vocabularies are combined into a final classifier. The various stages of the classifier (vocabulary selection and combination) are each optimized on a validation set. Results are presented on a dataset of 1360 images consisting of 17 flower species. It is shown that excellent performance can be achieved, far surpassing standard baseline algorithms using (for example) colour cues alone.}
+      \field{day}{1}
+      \field{eventtitle}{Proceedings of the {{IEEE Conference}} on {{Computer Vision}} and {{Pattern Recognition}}}
+      \field{isbn}{978-0-7695-2597-6}
+      \field{month}{2}
+      \field{title}{A {{Visual Vocabulary}} for {{Flower Classification}}}
+      \field{volume}{2}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{1447\bibrangedash 1454}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CVPR.2006.42
+      \endverb
+    \endentry
+    \entry{nilsbackDelvingDeeperWhorl2010}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b6e16bf7c88798afd517adb27d76d206}{%
+           family={Nilsback},
+           familyi={N\bibinitperiod},
+           given={Maria-Elena},
+           giveni={M\bibinithyphendelim E\bibinitperiod}}}%
+        {{hash=c72fc39e94030f67717052309266a44d}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{fullhash}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{fullhashraw}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{bibnamehash}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{authorbibnamehash}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{authornamehash}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{authorfullhash}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \strng{authorfullhashraw}{9614cc9bcfed730f883e77b2c7ba45f4}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe an algorithm for automatically segmenting flowers in colour photographs. This is a challeng- ing problem because of the sheer variety of flower classes, the variability within a class and within a par- ticular flower, and the variability of the imaging conditions - lighting, pose, foreshortening, etc. The method couples two models - a colour model for foreground and background, and a light generic shape model for the petal structure. This shape model is tolerant to viewpoint changes and petal defor- mations, and applicable across many different flower classes. The segmentations are produced using a MRF cost function optimized using graph cuts. We show how the components of the algorithm can be tuned to overcome common segmentation errors, and how performance can be optimized by learning parameters on a training set. The algorithm is evaluated on 13 flower classes and more than 750 examples. Performance is assessed against ground truth trimap segmentations. The algorithms is also compared to several previous approaches for flower segmentation.}
+      \field{day}{1}
+      \field{journaltitle}{Image Vision Comput.}
+      \field{month}{6}
+      \field{shortjournal}{Image Vision Comput.}
+      \field{title}{Delving Deeper into the Whorl of Flower Segmentation}
+      \field{volume}{28}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{1049\bibrangedash 1062}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.imavis.2009.10.001
+      \endverb
+    \endentry
+    \entry{ronnebergerUNetConvolutionalNetworks2015}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=8e46da9de9e53ea5d37089897d69cdd9}{%
+           family={Ronneberger},
+           familyi={R\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=c107bbd317cd780c2aa7006dbe61d83f}{%
+           family={Navab},
+           familyi={N\bibinitperiod},
+           given={Nassir},
+           giveni={N\bibinitperiod}}}%
+        {{hash=13dfdbfc375d5ae886268dec73d8d8f9}{%
+           family={Hornegger},
+           familyi={H\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4d166f6210ae1792f8f90d7871b4d234}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={William\bibnamedelima M.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2413defb142650e8edf0bcd5608ab789}{%
+           family={Frangi},
+           familyi={F\bibinitperiod},
+           given={Alejandro\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{fullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{fullhashraw}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{bibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorbibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authornamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorfullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorfullhashraw}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{editorbibnamehash}{33938a515d73fb8b00fd2bd7509d5e86}
+      \strng{editornamehash}{4171c25c17018ada2c9534d9247f9977}
+      \strng{editorfullhash}{33938a515d73fb8b00fd2bd7509d5e86}
+      \strng{editorfullhashraw}{33938a515d73fb8b00fd2bd7509d5e86}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net.}
+      \field{booktitle}{Medical {{Image Computing}} and {{Computer-Assisted Intervention}} – {{MICCAI}} 2015}
+      \field{isbn}{978-3-319-24574-4}
+      \field{langid}{english}
+      \field{shorttitle}{U-{{Net}}}
+      \field{title}{U-{{Net}}: {{Convolutional Networks}} for {{Biomedical Image Segmentation}}}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{234\bibrangedash 241}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/978-3-319-24574-4_28
+      \endverb
+      \verb{file}
+      \verb C:\Users\Winothy\Zotero\storage\PVMN9Z6U\Ronneberger et al. - 2015 - U-Net Convolutional Networks for Biomedical Image.pdf
+      \endverb
+      \keyw{Convolutional Layer,Data Augmentation,Deep Network,Ground Truth Segmentation,Training Image}
+    \endentry
+    \entry{badrinarayananSegNetDeepConvolutional2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2b517df4f81c42dc3c5b32aede012cf9}{%
+           family={Badrinarayanan},
+           familyi={B\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+        {{hash=4b1053f4ffb69cd61c1f122cc435c884}{%
+           family={Kendall},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=95c5bd0a1d6e6649ed56043a63268bfa}{%
+           family={Cipolla},
+           familyi={C\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Electrical and Electronics Engineers (IEEE)}%
+      }
+      \strng{namehash}{fb26318591964ff2e23ee05578819393}
+      \strng{fullhash}{fb26318591964ff2e23ee05578819393}
+      \strng{fullhashraw}{fb26318591964ff2e23ee05578819393}
+      \strng{bibnamehash}{fb26318591964ff2e23ee05578819393}
+      \strng{authorbibnamehash}{fb26318591964ff2e23ee05578819393}
+      \strng{authornamehash}{fb26318591964ff2e23ee05578819393}
+      \strng{authorfullhash}{fb26318591964ff2e23ee05578819393}
+      \strng{authorfullhashraw}{fb26318591964ff2e23ee05578819393}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a novel and practical deep fully convolutional neural network architecture for semantic pixel-wise segmentation termed SegNet. This core trainable segmentation engine consists of an encoder network, a corresponding decoder network followed by a pixel-wise classification layer. The architecture of the encoder network is topologically identical to the 13 convolutional layers in the VGG16 network [1] . The role of the decoder network is to map the low resolution encoder feature maps to full input resolution feature maps for pixel-wise classification. The novelty of SegNet lies is in the manner in which the decoder upsamples its lower resolution input feature map(s). Specifically, the decoder uses pooling indices computed in the max-pooling step of the corresponding encoder to perform non-linear upsampling. This eliminates the need for learning to upsample. The upsampled maps are sparse and are then convolved with trainable filters to produce dense feature maps. We compare our proposed architecture with the widely adopted FCN [2] and also with the well known DeepLab-LargeFOV [3] , DeconvNet [4] architectures. This comparison reveals the memory versus accuracy trade-off involved in achieving good segmentation performance. SegNet was primarily motivated by scene understanding applications. Hence, it is designed to be efficient both in terms of memory and computational time during inference. It is also significantly smaller in the number of trainable parameters than other competing architectures and can be trained end-to-end using stochastic gradient descent. We also performed a controlled benchmark of SegNet and other architectures on both road scenes and SUN RGB-D indoor scene segmentation tasks. These quantitative assessments show that SegNet provides good performance with competitive inference time and most efficient inference memory-wise as compared to other architectures. We also provide a Caffe implementation of SegNet and a web demo at http://mi.eng.cam.ac.uk/projects/segnet.}
+      \field{issn}{0162-8828}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{shorttitle}{{{SegNet}}}
+      \field{title}{{{SegNet}}: {{A Deep Convolutional Encoder-Decoder Architecture}} for {{Image Segmentation}}.}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Winothy\Zotero\storage\MK66BLKI\Badrinarayanan et al. - 2017 - SegNet A Deep Convolutional Encoder-Decoder Archi.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.repository.cam.ac.uk/handle/1810/271007
+      \endverb
+      \verb{url}
+      \verb https://www.repository.cam.ac.uk/handle/1810/271007
+      \endverb
+    \endentry
+    \entry{krizhevskyImageNetClassificationDeep2012}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{bibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorbibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authornamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhashraw}{1a23c09aa65b3c2ade45ed18d8127375}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We trained a large, deep convolutional neural network to classify the 1.3 million high-resolution images in the LSVRC-2010 ImageNet training set into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 39.7\textbackslash\% and 18.9\textbackslash\% which is considerably better than the previous state-of-the-art results. The neural network, which has 60 million parameters and 500,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and two globally connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of convolutional nets. To reduce overfitting in the globally connected layers we employed a new regularization method that proved to be very effective.}
+      \field{booktitle}{Advances in {{Neural Information Processing Systems}}}
+      \field{title}{{{ImageNet Classification}} with {{Deep Convolutional Neural Networks}}}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{25}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Winothy\Zotero\storage\M5K9ZXBD\Krizhevsky et al. - 2012 - ImageNet Classification with Deep Convolutional Ne.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+      \endverb
+      \verb{url}
+      \verb https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+      \endverb
+    \endentry
+    \entry{heDeepResidualLearning2016}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5e72bc22dbcf0984c6d113d280e36990}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiangyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Shaoqing},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3733dbdff90171390240438fddfbc952}
+      \strng{fullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{fullhashraw}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{bibnamehash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authorbibnamehash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authornamehash}{3733dbdff90171390240438fddfbc952}
+      \strng{authorfullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authorfullhashraw}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers - 8× deeper than VGG nets [40] but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions1, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.}
+      \field{booktitle}{2016 {{IEEE Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})}
+      \field{eventtitle}{2016 {{IEEE Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})}
+      \field{issn}{1063-6919}
+      \field{month}{6}
+      \field{title}{Deep {{Residual Learning}} for {{Image Recognition}}}
+      \field{urlday}{29}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{770\bibrangedash 778}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/CVPR.2016.90
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Winothy\\Zotero\\storage\\UHJNL58U\\He et al. - 2016 - Deep Residual Learning for Image Recognition.pdf;C\:\\Users\\Winothy\\Zotero\\storage\\JRS3TP5B\\7780459.html
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7780459
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7780459
+      \endverb
+      \keyw{Complexity theory,Degradation,Image recognition,Image segmentation,Neural networks,Training,Visualization}
+    \endentry
+    \entry{ioffeBatchNormalizationAccelerating2015}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=5543e82359e26b035efc009cb3efff9d}{%
+           family={Ioffe},
+           familyi={I\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{fullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{fullhashraw}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{bibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorbibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authornamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorfullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorfullhashraw}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Training Deep Neural Networks is complicated by the fact that the distribution of each layer's inputs changes during training, as the parameters of the previous layers change. This slows down the training by requiring lower learning rates and careful parameter initialization, and makes it notoriously hard to train models with saturating nonlinearities. We refer to this phenomenon as internal covariate shift, and address the problem by normalizing layer inputs. Our method draws its strength from making normalization a part of the model architecture and performing the normalization for each training mini-batch. Batch Normalization allows us to use much higher learning rates and be less careful about initialization. It also acts as a regularizer, in some cases eliminating the need for Dropout. Applied to a state-of-the-art image classification model, Batch Normalization achieves the same accuracy with 14 times fewer training steps, and beats the original model by a significant margin. Using an ensemble of batch-normalized networks, we improve upon the best published result on ImageNet classification: reaching 4.9\% top-5 validation error (and 4.8\% test error), exceeding the accuracy of human raters.}
+      \field{day}{2}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arxiv}
+      \field{month}{3}
+      \field{pubstate}{preprint}
+      \field{shorttitle}{Batch {{Normalization}}}
+      \field{title}{Batch {{Normalization}}: {{Accelerating Deep Network Training}} by {{Reducing Internal Covariate Shift}}}
+      \field{urlday}{30}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1502.03167
+      \endverb
+      \verb{eprint}
+      \verb 1502.03167
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Winothy\\Zotero\\storage\\V62SCZDS\\Ioffe and Szegedy - 2015 - Batch Normalization Accelerating Deep Network Tra.pdf;C\:\\Users\\Winothy\\Zotero\\storage\\GB98Y3RC\\1502.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1502.03167
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.03167
+      \endverb
+      \keyw{Computer Science - Machine Learning}
+    \endentry
+    \entry{srivastavaDropoutSimpleWay2014}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=6a147afa4569ce6cf23c0436e65d8486}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Nitish},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9a8750ccdb2a4cf14d2655face1ce016}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=bd2be300d445e9f6db7808f9533e66cb}{%
+           family={Salakhutdinov},
+           familyi={S\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8eeaede68a96eb301b76575348cd4b07}
+      \strng{fullhash}{2850768171a28ccacd146c300f66f57d}
+      \strng{fullhashraw}{2850768171a28ccacd146c300f66f57d}
+      \strng{bibnamehash}{2850768171a28ccacd146c300f66f57d}
+      \strng{authorbibnamehash}{2850768171a28ccacd146c300f66f57d}
+      \strng{authornamehash}{8eeaede68a96eb301b76575348cd4b07}
+      \strng{authorfullhash}{2850768171a28ccacd146c300f66f57d}
+      \strng{authorfullhashraw}{2850768171a28ccacd146c300f66f57d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Deep neural nets with a large number of parameters are very powerful machine learning systems. However, overfitting is a serious problem in such networks. Large networks are also slow to use, making it difficult to deal with overfitting by combining the predictions of many different large neural nets at test time. Dropout is a technique for addressing this problem. The key idea is to randomly drop units (along with their connections) from the neural network during training. This prevents units from co-adapting too much. During training, dropout samples from an exponential number of different thinned networks. At test time, it is easy to approximate the effect of averaging the predictions of all these thinned networks by simply using a single unthinned network that has smaller weights. This significantly reduces overfitting and gives major improvements over other regularization methods. We show that dropout improves the performance of neural networks on supervised learning tasks in vision, speech recognition, document classification and computational biology, obtaining state-of-the-art results on many benchmark data sets.}
+      \field{issn}{1533-7928}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{56}
+      \field{shorttitle}{Dropout}
+      \field{title}{Dropout: {{A Simple Way}} to {{Prevent Neural Networks}} from {{Overfitting}}}
+      \field{urlday}{30}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{volume}{15}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1929\bibrangedash 1958}
+      \range{pages}{30}
+      \verb{file}
+      \verb C:\Users\Winothy\Zotero\storage\IACH3IRR\Srivastava et al. - 2014 - Dropout A Simple Way to Prevent Neural Networks f.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v15/srivastava14a.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v15/srivastava14a.html
+      \endverb
+    \endentry
+    \entry{shortenSurveyImageData2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d49d1c5cbce775054678e29a462ca723}{%
+           family={Shorten},
+           familyi={S\bibinitperiod},
+           given={Connor},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c7e0de384e7d1be2ca29a338e7f5c047}{%
+           family={Khoshgoftaar},
+           familyi={K\bibinitperiod},
+           given={Taghi\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SpringerOpen}%
+      }
+      \strng{namehash}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{fullhash}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{fullhashraw}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{bibnamehash}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{authorbibnamehash}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{authornamehash}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{authorfullhash}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \strng{authorfullhashraw}{dae7c2fd5449b2cabfe6d8cea2eebe96}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep convolutional neural networks have performed remarkably well on many Computer Vision tasks. However, these networks are heavily reliant on big data to avoid overfitting. Overfitting refers to the phenomenon when a network learns a function with very high variance such as to perfectly model the training data. Unfortunately, many application domains do not have access to big data, such as medical image analysis. This survey focuses on Data Augmentation, a data-space solution to the problem of limited data. Data Augmentation encompasses a suite of techniques that enhance the size and quality of training datasets such that better Deep Learning models can be built using them. The image augmentation algorithms discussed in this survey include geometric transformations, color space augmentations, kernel filters, mixing images, random erasing, feature space augmentation, adversarial training, generative adversarial networks, neural style transfer, and meta-learning. The application of augmentation methods based on GANs are heavily covered in this survey. In addition to augmentation techniques, this paper will briefly discuss other characteristics of Data Augmentation such as test-time augmentation, resolution impact, final dataset size, and curriculum learning. This survey will present existing methods for Data Augmentation, promising developments, and meta-level decisions for implementing Data Augmentation. Readers will understand how Data Augmentation can improve the performance of their models and expand limited datasets to take advantage of the capabilities of big data.}
+      \field{issn}{2196-1115}
+      \field{issue}{1}
+      \field{journaltitle}{Journal of Big Data}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shortjournal}{J Big Data}
+      \field{title}{A Survey on {{Image Data Augmentation}} for {{Deep Learning}}}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{volume}{6}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 48}
+      \range{pages}{48}
+      \verb{doi}
+      \verb 10.1186/s40537-019-0197-0
+      \endverb
+      \verb{file}
+      \verb C:\Users\Winothy\Zotero\storage\SA8EA2BH\Shorten and Khoshgoftaar - 2019 - A survey on Image Data Augmentation for Deep Learn.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0
+      \endverb
+      \verb{url}
+      \verb https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0
+      \endverb
+    \endentry
+    \entry{thanapolReducingOverfittingImproving2020}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=82449bd088345b2bb6dea86d118aad7f}{%
+           family={Thanapol},
+           familyi={T\bibinitperiod},
+           given={Panissara},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d3a330c216e27863327b51b985a28d65}{%
+           family={Lavangnananda},
+           familyi={L\bibinitperiod},
+           given={Kittichai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=621c7bb433850f08e6e3d584bb626940}{%
+           family={Bouvry},
+           familyi={B\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=de159ced75fbe78fccb354c9ad87ab96}{%
+           family={Pinel},
+           familyi={P\bibinitperiod},
+           given={Frédéric},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1025036ee1aac2b1109509d47342990b}{%
+           family={Leprévost},
+           familyi={L\bibinitperiod},
+           given={Franck},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{8340d3eb9772c05f8d86b237bfe456da}
+      \strng{fullhash}{18940b91c884dcad0068876f73ebe427}
+      \strng{fullhashraw}{18940b91c884dcad0068876f73ebe427}
+      \strng{bibnamehash}{18940b91c884dcad0068876f73ebe427}
+      \strng{authorbibnamehash}{18940b91c884dcad0068876f73ebe427}
+      \strng{authornamehash}{8340d3eb9772c05f8d86b237bfe456da}
+      \strng{authorfullhash}{18940b91c884dcad0068876f73ebe427}
+      \strng{authorfullhashraw}{18940b91c884dcad0068876f73ebe427}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In deep learning, application of Convolutional Neural Network (CNN) is prolific in image recognition. CNN assumes that large amount of samples are available in the dataset in order to implement an effective CNN model. However, this assumption may not be practical or possible in some real world applications. It is commonly known that training a CNN model under limited samples available often leads to overfitting and inability to generalize. Data augmentation, batch normalization and dropout techniques have been suggested to mitigate such problems. This work studies the effect of overfitting and generalization in image recognition of intentionally contracted CIF AR-10 dataset. Application of these techniques and their combination are considered as well as injection of data augmentation at different epochs. The result of this work reveals that utilizing injection at 30 epoch in the application of width and height shift data augmentation together with dropout yields the best performance and can overcome the overfitting effect best.}
+      \field{booktitle}{2020 - 5th {{International Conference}} on {{Information Technology}} ({{InCIT}})}
+      \field{eventtitle}{2020 - 5th {{International Conference}} on {{Information Technology}} ({{InCIT}})}
+      \field{month}{10}
+      \field{title}{Reducing {{Overfitting}} and {{Improving Generalization}} in {{Training Convolutional Neural Network}} ({{CNN}}) under {{Limited Sample Sizes}} in {{Image Recognition}}}
+      \field{urlday}{29}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{300\bibrangedash 305}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/InCIT50588.2020.9310787
+      \endverb
+      \verb{file}
+      \verb C:\Users\Winothy\Zotero\storage\SHQK75X4\9310787.html
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9310787
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9310787
+      \endverb
+      \keyw{CIFAR-10 Dataset,Convolution Neural Network (CNN),Data models,Deep learning,Feature extraction,Generalization,Image color analysis,Image recognition,Image Recognition,Neural networks,Overfitting,Training}
+    \endentry
+    \entry{pmlr-v9-erhan10a}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=8bbc4c5d96f205bada839e74e0202146}{%
+           family={Erhan},
+           familyi={E\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=da21e966c02c3cfd33d74369c7435c1a}{%
+           family={Vincent},
+           familyi={V\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=a71fae003da84f44e31d26e868859945}{%
+           family={Teh},
+           familyi={T\bibinitperiod},
+           given={Yee\bibnamedelima Whye},
+           giveni={Y\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=4f07cb446ab04d4d77854b6722712e32}{%
+           family={Titterington},
+           familyi={T\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chia Laguna Resort, Sardinia, Italy}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{049db1a86fddcb98822a107d06955db7}
+      \strng{fullhash}{ff0329e15ebb57208298997efb274b13}
+      \strng{fullhashraw}{ff0329e15ebb57208298997efb274b13}
+      \strng{bibnamehash}{ff0329e15ebb57208298997efb274b13}
+      \strng{authorbibnamehash}{ff0329e15ebb57208298997efb274b13}
+      \strng{authornamehash}{049db1a86fddcb98822a107d06955db7}
+      \strng{authorfullhash}{ff0329e15ebb57208298997efb274b13}
+      \strng{authorfullhashraw}{ff0329e15ebb57208298997efb274b13}
+      \strng{editorbibnamehash}{ea4550790536e3c5e0b1f0cd5656198b}
+      \strng{editornamehash}{ea4550790536e3c5e0b1f0cd5656198b}
+      \strng{editorfullhash}{ea4550790536e3c5e0b1f0cd5656198b}
+      \strng{editorfullhashraw}{ea4550790536e3c5e0b1f0cd5656198b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Much recent research has been devoted to learning algorithms for deep architectures such as Deep Belief Networks and stacks of auto-encoder variants with impressive results being obtained in several areas, mostly on vision and language datasets. The best results obtained on supervised learning tasks often involve an unsupervised learning component, usually in an unsupervised pre-training phase. The main question investigated here is the following: why does unsupervised pre-training work so well? Through extensive experimentation, we explore several possible explanations discussed in the literature including its action as a regularizer (Erhan et al. 2009) and as an aid to optimization (Bengio et al. 2007). Our results build on the work of Erhan et al. 2009, showing that unsupervised pre-training appears to play predominantly a regularization role in subsequent supervised training. However our results in an online setting, with a virtually unlimited data stream, point to a somewhat more nuanced interpretation of the roles of optimization and regularization in the unsupervised pre-training effect.}
+      \field{booktitle}{Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics}
+      \field{month}{13--15 May}
+      \field{series}{Proceedings of Machine Learning Research}
+      \field{title}{Why Does Unsupervised Pre-training Help Deep Learning?}
+      \field{volume}{9}
+      \field{year}{2010}
+      \field{pages}{201\bibrangedash 208}
+      \range{pages}{8}
+      \verb{file}
+      \verb http://proceedings.mlr.press/v9/erhan10a/erhan10a.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v9/erhan10a.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v9/erhan10a.html
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{C2}
+  \missing{Lamp86}
+\endrefsection
+\endinput
+

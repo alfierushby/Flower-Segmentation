@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber home"] 1714935464.4908 "home.bcf" "home.bbl" "home" 1714935626.17273 0
-  "home.bcf" 1714935625 109020 07dffb22cfd74d505802fe4386efa4c4 "pdflatex"
+["biber home"] 0 "home.bcf" "home.bbl" "home" 1715026682.92829 -1
+  "home.bcf" 1715026682 109020 07dffb22cfd74d505802fe4386efa4c4 "pdflatex"
   "lib.bib" 1714935423 28902 a62de48edf1cddad938add5ef1e40e97 ""
   (generated)
   "home.bbl"
   "home.blg"
   (rewritten before read)
-["pdflatex"] 1714935624.72295 "c:/Users/Winothy/Documents/Nottingham Uni Work/matlab_vision/compviscw/home.tex" "home.pdf" "home" 1714935626.17352 0
-  "C:/Users/Winothy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1714920566 82507 a9eef8696c92627b87e9975edea03b2a ""
+["pdflatex"] 1715026681.37383 "c:/Users/Winothy/Documents/Nottingham Uni Work/matlab_vision/compviscw/home.tex" "home.pdf" "home" 1715026682.92919 0
+  "C:/Users/Winothy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1715008558 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Winothy/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1714652427 24236949 9afea111bf07c490a8b42ced687b2bfe ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136765053 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -33,6 +33,9 @@
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1247596666 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb" 1136846148 45758 19968a0990191524e34e1994d4a31cb6 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136853348 44729 fea0975e20ec51c992338362f05f1146 ""
@@ -74,6 +77,7 @@
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lbx" 1711466047 40021 daa5a82ed0967f3ac4b77cb8384cac55 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1601897756 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg" 1465894292 1224 978390e9c2234eab29404bc21b268d1e ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/pdftex.def" 1713599642 19440 9da9dcbb27470349a580fca7372d454b ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty" 1665067579 18387 8f900a490197ebaf93c02ae9476d4b09 ""
@@ -90,12 +94,19 @@
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1pcr.fd" 1585253778 1025 1ed784d7bfe47179f3550d2303b073f8 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "C:/Users/Winothy/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Winothy/Documents/Nottingham Uni Work/matlab_vision/compviscw/home.tex" 1714935622 12061 cffece902b9243c83e4ffa1a629493ea ""
-  "home.aux" 1714935625 4575 bcbc62267811907bc41cadd3e8495af2 "pdflatex"
+  "c:/Users/Winothy/Documents/Nottingham Uni Work/matlab_vision/compviscw/home.tex" 1715026679 16329 f23822ace4b698ec6a4048ef9b3babcd ""
+  "denoise.png" 1715005835 454499 318538a959f77f5df545f6f9189ec272 ""
+  "home.aux" 1715026682 5822 139fa7d89e0de754dbd984e07c9a169f "pdflatex"
   "home.bbl" 1714935467 41818 9c013c8c5567b8456c68232e2c60f060 "biber home"
-  "home.run.xml" 1714935625 2395 3d7acd940377e07baf774dac5c6c2f3d "pdflatex"
-  "home.tex" 1714935622 12061 cffece902b9243c83e4ffa1a629493ea ""
+  "home.run.xml" 1715026682 2395 3d7acd940377e07baf774dac5c6c2f3d "pdflatex"
+  "home.tex" 1715026679 16329 f23822ace4b698ec6a4048ef9b3babcd ""
+  "resnetUnet.pdf" 1715026515 52924 5d6f2854bdac93f19d60b1c4da2462e0 ""
+  "resnetUnetDecode.pdf" 1715026132 33910 0f13154351d41a24a24740a755996731 ""
+  "resnetUnetEncode.pdf" 1715026547 50215 c200e93e0291ee87da7e166b0f242580 ""
   "spconf.sty" 1714652539 8798 121ab5e33850ab4cf48fc2795d92b250 ""
+  "unet.pdf" 1715015361 48181 39af2222ededa4231e934ee3e43c53f9 ""
+  "unetDecode.pdf" 1715015700 34272 65f70e83516f53c0b59139aba5f767d9 ""
+  "unetEncode.pdf" 1715015592 45484 8eebdc90e157f27be5660fcc33d72356 ""
   (generated)
   "home.aux"
   "home.bcf"

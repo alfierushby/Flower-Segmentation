@@ -5,6 +5,7 @@
 \documentclass{article}
 \usepackage{spconf,amsmath,graphicx}
 \usepackage[style=IEEE]{biblatex}
+\usepackage{float}
 \addbibresource{lib.bib} % note the .bib is required
 
 % Example definitions.
@@ -83,36 +84,95 @@ It is also possible to transfer learn, or fine tune pre-trained models to use th
 
 
 \section{Methodology}
-\label{sec:pagestyle}
 
-The paper title (on the first page) should begin 1.38 inches (35 mm) from the
-top edge of the page, centred, completely capitalized, and in Times 14-point,
-boldface type.  The authors' name(s) and affiliation(s) appear below the title
-in capital and lower case letters.  Papers with multiple authors and
-affiliations may require two or more lines for this information. Please note
-that papers should not be submitted blind; include the authors' names on the
-PDF.
 
-\section{TYPE-STYLE AND FONTS}
-\label{sec:typestyle}
+\subsubsection{Data pre-processing}
 
-To achieve the best rendering both in printed proceedings and electronic proceedings, we
-strongly encourage you to use Times-Roman font.  In addition, this will give
-the proceedings a more uniform look.  Use a font that is no smaller than nine
-point type throughout the paper, including figure captions.
+The dataset by default has more than 2 labels for the segmentation, and has a number of flowers that are unlabelled. The labels themselves include more than 2 classes at times, and so some labels need to be merged with the flower and background class.
 
-In nine point type font, capital letters are 2 mm high.  {\bf If you use the
-smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
-vertically.}  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
-the paper much more readable.  Larger type sizes require correspondingly larger
-vertical spacing.  Please do not double-space your paper.  TrueType or
-Postscript Type 1 fonts are preferred.
+First, the flowers without labels are deleted, resulting in 846 labelled flower images to work with. The possible classes for the labelled pixels are null, flower, background, leaves, and sky. Null and flower are often just the inner flower and its boundary, and so can be combined. The other labels are all 'background' and so can also be combined into the background class. This has been directly applied to the dataset with MATLAB and saved so that it doesn't need to be re-applied on every run of training.
 
-The first paragraph in each section should not be indented, but all the
-following paragraphs within the section should be indented as these paragraphs
-demonstrate.
+For the transfer learning method, it is also important to note that the images and labels will be resized to 224x224 to fit the ResNet input dimension. This is done with MATLAB's resize algorithm.
 
-\section{MAJOR HEADINGS}
+The images of the flowers are also noisy due to the resizing algorithm used, and so a minor blur has been applied to smooth out the artefacts. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{denoise.png}
+    \caption{Denoising of an image in the dataset}
+    \label{fig:enter-label}
+\end{figure}
+
+This method does add a blur to the image, but it smooths out the artefacts which seems to favour the training if you look at the \textbf{Evaluation} section.
+
+\subsubsection{Data Augmentation}
+
+Along with pre-processing, an active data augmentation method has been utilized during training, where a set of random affine transformations are applied to the images. This includes X and Y translations between -10 and 10 pixels, an X reflection, and a random scaling factor between 1 to 1.5.
+
+\subsubsection{Segmentation with a 'from scratch' model}
+
+From what has been discussed in the literature review, a U-Net along with Batch Normalization and Dropout has been chosen:
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{unet.pdf}
+    \caption{Model Architecture}
+\end{figure}
+
+Relu and batch-normalization layers have been left out of the diagram to save space, but you can assume that every up-convolution has a batch-normalization and every convolution has a ReLu layer. 
+
+The network was trained with a maximum epoch of 256, with a linear learning rate of 0.001 with the 'Stochastic Gradient Descent with momentum' optimizer. The simple method was chosen so that a focus could be put on the architecture, as there was not a need for optimizing the time taken to train for such a small model.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{unetEncode.pdf}
+    \caption{Encoder Architecture}
+\end{figure}
+
+The encoder has been set up to start by creating 20 filters from the first convolution, without decreasing the spatial resolution. From this, it follows the pattern of doubling the filters and halving the resolution to 32x32 pixels. 
+
+No more layers were added as it added complexity and made training difficult. It uses 3x3 filters all the way through, with the lowering spatial resolution negating the need for larger ones.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{unetDecode.pdf}
+    \caption{Decoder Architecture}
+\end{figure}
+
+The decoder works similarly, except that it uses convolutions to upscale, not max-pooling. The end layer is a softmax layer. It uses 4x4 filters.
+
+\subsubsection{Segmentation with a 'Pre-trained' model}
+
+Resnet-18 was used as the base to pre-train off of. This was chosen because it is a relatively small classifier trained on a 1000 class image dataset. It is hypothesized that the first few layers are useful from this to fine tune towards the flower segmentation problem. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{resnetUnet.pdf}
+    \caption{ResNet + U-Net Model Architecture}
+\end{figure}
+
+As ResNet is a classifier a number of modifications were done to make it segment images. A number of the resNet convolutions were removed to make training easier, leaving just two sets of branched 'layers'. The pink layers are ReLu layers as they hold a more important role here, so they are included. Batch Normalization is not shown, but appears after every convolution in the downsample area.
+
+An interesting quirk from this is that there is only one pooling of downsampling, which is at the start. This is due to removing the ResNet layers past the 2 pairs. Such a quirk doesn't seem to negatively impact performance.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{resnetUnetEncode.pdf}
+    \caption{Encoder Architecture}
+\end{figure} 
+
+There are two skip connections that sum the previous convolution outputs, where it is done in pairs. This part is taken from ResNet-18 and is pre-trained.
+
+When training, the learning rate of these layers was set to 0.4. Instead of stopping learning completely, a smaller learning rate will allow the training to adapt the first layers, and with the fact that they are already trained from another dataset, gain an advantage when learning.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{resnetUnetDecode.pdf}
+    \caption{Decoder Architecture}
+\end{figure} 
+
+The decoder follows a similar structure to the U-Net used in the 'from-scratch' model. The main difference is there is one less convolution pass, as the dimension inputted to it only requires 2 2x2 filter passes on up-convolutions, from 56x56 to 224x224. The filter sizes were chosen to accommodate the input dimension.
+
+\section{Evaluation}
 \label{sec:majhead}
 
 Major headings, for example, "1. Introduction", should appear in all capital

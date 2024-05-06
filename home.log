@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.2)  5 MAY 2024 20:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.2)  6 MAY 2024 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -377,42 +377,49 @@ Package biblatex Info: ... and expl3
 Package: xparse 2024-03-14 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
-))
-\@quotelevel=\count406
-\@quotereset=\count407
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 42.
+)) (C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count406
+\float@exts=\toks23
+\float@box=\box54
+\@float@everytoks=\toks24
+\@floatcapt=\box55
+)
+\@quotelevel=\count407
+\@quotereset=\count408
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 43.
  (C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (home.aux)
 \openout1 = `home.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
  (C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count408
+\scratchcounter=\count409
 \scratchdimen=\dimen152
-\scratchbox=\box54
-\nofMPsegments=\count409
-\nofMParguments=\count410
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count411
+\scratchbox=\box56
+\nofMPsegments=\count410
+\nofMParguments=\count411
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count412
 \MPscratchDim=\dimen153
-\MPnumerator=\count412
-\makeMPintoPDFobject=\count413
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count413
+\makeMPintoPDFobject=\count414
+\everyMPtoPDFconversion=\toks26
 ) (C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -447,62 +454,116 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 42.
-Package biblatex Info: Reference segment=0 on input line 42.
+Package biblatex Info: Reference section=0 on input line 43.
+Package biblatex Info: Reference segment=0 on input line 43.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1{C:/Users/Winothy/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 
 ]
+<denoise.png, id=9, 978.65625pt x 407.5225pt>
+File: denoise.png Graphic file (type png)
+<use denoise.png>
+Package pdftex.def Info: denoise.png  used on input line 101.
+(pdftex.def)             Requested size: 244.6937pt x 101.8928pt.
 
-LaTeX Warning: Citation 'Lamp86' on page 2 undefined on input line 170.
+Underfull \hbox (badness 1205) in paragraph at lines 110--111
+\OT1/ptm/m/n/10 Along with pre-processing, an ac-tive data aug-men-ta-tion
+ []
+
+<unet.pdf, id=11, 992.82822pt x 396.04965pt>
+File: unet.pdf Graphic file (type pdf)
+<use unet.pdf>
+Package pdftex.def Info: unet.pdf  used on input line 117.
+(pdftex.def)             Requested size: 244.6937pt x 97.61014pt.
+<unetEncode.pdf, id=12, 469.94272pt x 386.75792pt>
+File: unetEncode.pdf Graphic file (type pdf)
+<use unetEncode.pdf>
+Package pdftex.def Info: unetEncode.pdf  used on input line 127.
+(pdftex.def)             Requested size: 244.6937pt x 201.38083pt.
+<unetDecode.pdf, id=13, 563.06662pt x 382.3605pt>
+File: unetDecode.pdf Graphic file (type pdf)
+<use unetDecode.pdf>
+Package pdftex.def Info: unetDecode.pdf  used on input line 137.
+(pdftex.def)             Requested size: 244.6937pt x 166.16211pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./denoise.png> <./unet.pdf> <./unetEncode.pdf>]
+<resnetUnet.pdf, id=52, 1024.12408pt x 386.75792pt>
+File: resnetUnet.pdf Graphic file (type pdf)
+<use resnetUnet.pdf>
+Package pdftex.def Info: resnetUnet.pdf  used on input line 149.
+(pdftex.def)             Requested size: 244.6937pt x 92.40479pt.
+<resnetUnetEncode.pdf, id=53, 567.76515pt x 386.75792pt>
+File: resnetUnetEncode.pdf Graphic file (type pdf)
+<use resnetUnetEncode.pdf>
+Package pdftex.def Info: resnetUnetEncode.pdf  used on input line 159.
+(pdftex.def)             Requested size: 244.6937pt x 166.68625pt.
+
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+<resnetUnetDecode.pdf, id=54, 495.68687pt x 382.3605pt>
+File: resnetUnetDecode.pdf Graphic file (type pdf)
+<use resnetUnetDecode.pdf>
+Package pdftex.def Info: resnetUnetDecode.pdf  used on input line 169.
+(pdftex.def)             Requested size: 244.6937pt x 188.75269pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./unetDecode.pdf> <./resnetUnet.pdf> <./resnetUnetEncode.pdf> <./resnetUnetDecode.pdf>]
+
+LaTeX Warning: Citation 'Lamp86' on page 4 undefined on input line 230.
 
 
-LaTeX Warning: Citation 'C2' on page 2 undefined on input line 215.
+LaTeX Warning: Citation 'C2' on page 4 undefined on input line 275.
 
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 224.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 284.
 (C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [2]
-Underfull \hbox (badness 1270) in paragraph at lines 224--224
+)
+Underfull \hbox (badness 1270) in paragraph at lines 284--284
 \OT1/ptm/m/it/10 cess-ing Sys-tems\OT1/ptm/m/n/10 , vol. 25, Cur-ran As-so-ciates, Inc.,
  []
 
 
-Overfull \hbox (34.46622pt too wide) in paragraph at lines 224--224
+Overfull \hbox (34.46622pt too wide) in paragraph at lines 284--284
 \OT1/pcr/m/n/10 c399862d3b9d6b76c8436e924a68c45b -[] Abstract .
  []
 
-
-Underfull \hbox (badness 1558) in paragraph at lines 224--224
+[4]
+Underfull \hbox (badness 1558) in paragraph at lines 284--284
 \OT1/ptm/m/n/10 Pre-vent Neu-ral Net-works from Over-fit-ting,'' \OT1/ptm/m/it/10 Jour-
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 224--224
+Underfull \hbox (badness 1540) in paragraph at lines 284--284
 \OT1/ptm/m/n/10 pp. 1929{1958, 2014, \OT1/ptm/m/sc/10 issn\OT1/ptm/m/n/10 : 1533-7928. [On-line].
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 224--224
+Underfull \hbox (badness 1960) in paragraph at lines 284--284
 \OT1/ptm/m/n/10 ral Net-work (CNN) un-der Lim-ited Sam-ple Sizes
  []
 
 
 Package biblatex Warning: Month out of range
-(biblatex)                at entry 'pmlr-v9-erhan10a' on input line 224.
+(biblatex)                at entry 'pmlr-v9-erhan10a' on input line 284.
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 224--224
+Underfull \hbox (badness 1163) in paragraph at lines 284--284
 \OT1/ptm/m/n/10 ings of Ma-chine Learn-ing Re-search, vol. 9, Chia
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 224--224
+Underfull \hbox (badness 1028) in paragraph at lines 284--284
 \OT1/ptm/m/n/10 2010, pp. 201{208. [On-line]. Avail-able: $\OT1/pcr/m/n/10 https :
  []
 
-[3] (home.aux)
+[5] (home.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -512,17 +573,17 @@ Package logreq Info: Writing requests to 'home.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10457 strings out of 474424
- 200650 string characters out of 5740796
+ 10576 strings out of 474424
+ 202949 string characters out of 5740796
  1943496 words of memory out of 5000000
- 32704 multiletter control sequences out of 15000+600000
+ 32819 multiletter control sequences out of 15000+600000
  574513 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,8n,81p,2234b,1718s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on home.pdf (3 pages, 99579 bytes).
+<C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Winothy/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on home.pdf (5 pages, 631138 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

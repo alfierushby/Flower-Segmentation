@@ -1,6 +1,5 @@
 
-%% Pre-process the data
-
+%% Get the Image Data 
 dataDir = fullfile("data_for_moodle");
 imageDir = fullfile(dataDir,'images_256');
 labelDir = fullfile(dataDir,'labels_256');
@@ -16,6 +15,7 @@ labelsSearch = labelsSearch(~ismember({labelsSearch.name},{'.','..'}));
 labelNames = erase(string({labelsSearch.name}),'.png'); 
 imageNames = erase(string({imagesSearch.name}),'.jpg');
 
+%% Pre-process the data (ONLY RUN ONCE, AND IF THE DATA IS THE ORIGINAL)
 % Get names in common
 for name = imageNames
     % Get all files that are in the images dataset but not the label
@@ -23,15 +23,25 @@ for name = imageNames
     if  isempty(find(ismember(labelNames, name), 1))
         % Delete them.
         delete(fullfile("data_for_moodle/","images_256/",strcat(name,'.jpg')))
+    else
+        % Now combine labels that aren't background or flower
+        label = imread(fullfile("data_for_moodle/","labels_256/",strcat(name,'.png')));
+        label = removeLabels(label);
+        imwrite(label,strcat("data_for_moodle/","labels_256/",strcat(name,'.png')))
+    
+        %Filter to remove compression artefacts
+        image = imread(fullfile("data_for_moodle/","images_256/",strcat(name,'.jpg')));
+        [noisyR,noisyG,noisyB] = imsplit(image);
+        denoisedR = filter2(fspecial('disk',1),noisyR)/255;
+        denoisedG = filter2(fspecial('disk',1),noisyG)/255;
+        denoisedB = filter2(fspecial('disk',1),noisyB)/255;
+        denoisedRGB = cat(3,denoisedR,denoisedG,denoisedB);
+        imwrite(denoisedRGB,strcat("data_for_moodle/","images_256/",strcat(name,'.jpg')))
     end
     
-    % Now combine labels that aren't background or flower
-    label = imread(fullfile("data_for_moodle/","labels_256/",strcat(name,'.png')));
-    label = removeLabels(label);
-    imwrite(label,strcat("data_for_moodle/","labels_256/",strcat(name,'.png')))
 end
 
-
+%% Split and Setup Data
 
 % Gets labels from ground truth data
 classNames = ["flower", "background"];
@@ -64,6 +74,27 @@ pxdsVal = subset(pxds,indexes(bound60+1:bound60+bound20));
 imdsTest = subset(imds,indexes(bound60+bound20+1:numFiles));
 pxdsTest = subset(pxds,indexes(bound60+bound20+1:numFiles));
 
+
+% Create combined Data (and also remove the labels that arent background
+% and flower by setting them to background).
+trainingData = combine(imdsTrain,pxdsTrain);
+validationData = combine(imdsVal,pxdsVal);
+testData = combine(imdsTest,pxdsTest);
+
+% Create transformed data that has augmentations during training
+transformedTrainingData = transform(trainingData, @(x)augmentImageAndLabel(x,[-10 10],[-10 10],[1 1.5]));
+
+% Display a portion of the transformed data
+data = readall(transformedTrainingData);
+rgb = cell(9,1);
+for k = 1:9
+    I = data{k,1};
+    C = data{k,2};
+    rgb{k} = labeloverlay(I,C);
+end
+montage(rgb)
+%%
+
 %% Show an instance of the dataset
 
 I = readimage(imdsTest,26);
@@ -74,13 +105,22 @@ tl = imresize(uint16(L),5);
 
 imshowpair(t,tl,'montage')
 
-%% Train the from-scratch network.
+%%
+im = imread("data_for_moodle\images_256\image_0044.jpg");
 
-% Create combined Data (and also remove the labels that arent background
-% and flower by setting them to background).
-trainingData = combine(imdsTrain,pxdsTrain);
-validationData = combine(imdsVal,pxdsVal);
-testData = combine(imdsTest,pxdsTest);
+[noisyR,noisyG,noisyB] = imsplit(im);
+denoiseNet = denoisingNetwork("dncnn");
+denoisedR = filter2(fspecial('disk',1),noisyR)/255;
+denoisedG = filter2(fspecial('disk',1),noisyG)/255;
+denoisedB = filter2(fspecial('disk',1),noisyB)/255;
+figure
+denoisedRGB = cat(3,denoisedR,denoisedG,denoisedB);
+imshowpair(im,denoisedRGB,'montage')
+figure
+imshow(denoisedRGB)
+title("Denoised Image")
+
+%% Train the from-scratch network.
 
 % Count labels
 tbl = countEachLabel(pxds);
@@ -95,7 +135,7 @@ filterSize = 3;
 numFilters = 20;
 
 % Setup checkpoint to train from
-load('checkpoints\net_checkpoint__3968__2024_05_04__17_18_44.mat','net')
+%load('checkpoints\net_checkpoint__3968__2024_05_04__17_18_44.mat','net')
 
 % Create a dlnetwork for populating with layers.
 dnet = dlnetwork;
@@ -134,34 +174,21 @@ deepNetworkDesigner(dnet)
 % Setup options
 opts = trainingOptions('sgdm',...
     'InitialLearnRate',1e-3,...
-    'MaxEpochs',128,...
+    'MaxEpochs',256,...
      'ValidationData',validationData, ...
     'ValidationFrequency',100, ...
-    'ValidationPatience',25, ...
+    'ValidationPatience',15, ...
     'MiniBatchSize',16,  ...
     'Verbose',false, ...
     'Plots','training-progress', ...
     'OutputNetwork',"best-validation", ...
     "CheckpointPath","checkpoints");
 
-% Create transformed data that has augmentations during training
-transformedTrainingData = transform(trainingData, @(x)augmentImageAndLabel(x,[-10 10],[-10 10],[1 1.5]));
-
-% Display a portion of the transformed data
-data = readall(transformedTrainingData);
-rgb = cell(9,1);
-for k = 1:9
-    I = data{k,1};
-    C = data{k,2};
-    rgb{k} = labeloverlay(I,C);
-end
-montage(rgb)
-
 % Start training the network
 [net2,info] = trainnet(transformedTrainingData,dnet,@modelLoss,opts);
 
 %% Test Images in the Test Set for a specific saved network
-netpre = coder.loadDeepLearningNetwork("trainTransform[-20 20],[-20 20],[1 1.5]2Class1.mat");
+netpre = coder.loadDeepLearningNetwork("trainTransform[-20 20],[-20 20],[1 1.5]2Class1DropoutBlur.mat");
 
 testImage = readimage(imdsTest,26);
 figure
@@ -208,6 +235,7 @@ upSample = [
     reluLayer()
     transposedConv2dLayer(2,256,'Stride',2,'Cropping',0)
     reluLayer()
+    dropoutLayer(0.2)
     convolution2dLayer(1,2)
     softmaxLayer()];
 
@@ -216,26 +244,26 @@ pretrainNet = addLayers(pretrainNet,upSample);
 % Connect the upsampling layers together
 pretrainNet = connectLayers(pretrainNet, 'res2b_relu', 'upsample');
 
-load('checkpoints\net_checkpoint__4032__2024_05_04__18_51_32.mat','net')
+%load('checkpoints\net_checkpoint__4032__2024_05_04__18_51_32.mat','net')
 
 % Setup options
 preopts = trainingOptions('sgdm',...
     'InitialLearnRate',3e-3,...
-    'MaxEpochs',64,...
+    'MaxEpochs',256,...
      'ValidationData',resizedVal, ...
     'ValidationFrequency',100, ...
-    'MiniBatchSize',8,  ...
+    'MiniBatchSize',4,  ...
     'Verbose',false, ...
     'Plots','training-progress', ...
     'OutputNetwork',"best-validation", ...
     "CheckpointPath","checkpoints");
 deepNetworkDesigner(pretrainNet)
-
-[net3,info] = trainnet(resizedData,net,@modelLoss,preopts);
+%%
+[net3,info] = trainnet(resizedData,pretrainNet,@modelLoss,preopts);
 %%
 
 %% Test Images in the Test Set for a specific saved network
-netpre = coder.loadDeepLearningNetwork("resnet2.mat");
+netpre = coder.loadDeepLearningNetwork("resnet2DropoutBlur.mat");
 
 testImage = readimage(resizedImdsTest,26);
 figure

@@ -1,6 +1,6 @@
-PWD c:\Users\Winothy\Documents\Nottingham Uni Work\matlab_vision\compviscw
+PWD c:\Users\Winothy\Documents\Nottingham Uni Work\matlab_vision\Flower-Segmentation\Latex
 INPUT C:\Users\Winothy\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Winothy\Documents\Nottingham Uni Work\matlab_vision\compviscw\home.tex
+INPUT c:\Users\Winothy\Documents\Nottingham Uni Work\matlab_vision\Flower-Segmentation\Latex\home.tex
 OUTPUT home.log
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -110,14 +110,14 @@ INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfes
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
-INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
-INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\auxhook\auxhook.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\Winothy\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def

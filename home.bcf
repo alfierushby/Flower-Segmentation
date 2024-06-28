@@ -2387,8 +2387,9 @@
     <bcf:citekey order="8" intorder="1">shortenSurveyImageData2019</bcf:citekey>
     <bcf:citekey order="9" intorder="1">thanapolReducingOverfittingImproving2020</bcf:citekey>
     <bcf:citekey order="10" intorder="1">pmlr-v9-erhan10a</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">Lamp86</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">C2</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">resnet18</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">heDeepResidualLearning2016</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">nilsbackVisualVocabularyFlower2006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

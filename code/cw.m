@@ -15,7 +15,7 @@ labelsSearch = labelsSearch(~ismember({labelsSearch.name},{'.','..'}));
 labelNames = erase(string({labelsSearch.name}),'.png'); 
 imageNames = erase(string({imagesSearch.name}),'.jpg');
 
-%% Pre-process the data (ONLY RUN ONCE, AND IF THE DATA IS THE ORIGINAL)
+%% Pre-process the data (ONLY RUN ONCE, AND IF THE DATA IS THE ORIGINAL, IT FREEZES MATLAB EVEN AFTER IT'S DONE)
 % Get names in common
 for name = imageNames
     % Get all files that are in the images dataset but not the label
@@ -93,7 +93,6 @@ for k = 1:9
     rgb{k} = labeloverlay(I,C);
 end
 montage(rgb)
-%%
 
 %% Show an instance of the dataset
 
@@ -105,22 +104,7 @@ tl = imresize(uint16(L),5);
 
 imshowpair(t,tl,'montage')
 
-%%
-im = imread("data_for_moodle\images_256\image_0044.jpg");
-
-[noisyR,noisyG,noisyB] = imsplit(im);
-denoiseNet = denoisingNetwork("dncnn");
-denoisedR = filter2(fspecial('disk',1),noisyR)/255;
-denoisedG = filter2(fspecial('disk',1),noisyG)/255;
-denoisedB = filter2(fspecial('disk',1),noisyB)/255;
-figure
-denoisedRGB = cat(3,denoisedR,denoisedG,denoisedB);
-imshowpair(im,denoisedRGB,'montage')
-figure
-imshow(denoisedRGB)
-title("Denoised Image")
-
-%% Train the from-scratch network.
+%% Setup the from-scratch network.
 
 % Count labels
 tbl = countEachLabel(pxds);
@@ -184,13 +168,14 @@ opts = trainingOptions('sgdm',...
     'OutputNetwork',"best-validation", ...
     "CheckpointPath","checkpoints");
 
-% Start training the network
+%% Start training the network
 [net2,info] = trainnet(transformedTrainingData,dnet,@modelLoss,opts);
 
 %% Test Images in the Test Set for a specific saved network
 netpre = coder.loadDeepLearningNetwork("trainTransform[-20 20],[-20 20],[1 1.5]2Class1DropoutBlur.mat");
 
-testImage = readimage(imdsTest,26);
+testImage = readimage(imdsTest,54);
+testLabel = readimage(pxdsTest,54);
 figure
 imshow(testImage);
 C = semanticseg(testImage,netpre);
@@ -202,9 +187,8 @@ pxdsResults = semanticseg(imdsTest,netpre,Classes=classNames,WriteLocation=tempd
 metrics = evaluateSemanticSegmentation(pxdsResults,pxdsTest);
 metrics.ClassMetrics
 metrics.ConfusionMatrix
-deepNetworkDesigner(netpre)
 
-%% Setup and Train Existing Network for Transfer Learning
+%% Setup Existing Network for Transfer Learning
 
 [pretrainNet,classNamess] = imagePretrainedNetwork("resnet18");
 
@@ -258,14 +242,17 @@ preopts = trainingOptions('sgdm',...
     'OutputNetwork',"best-validation", ...
     "CheckpointPath","checkpoints");
 deepNetworkDesigner(pretrainNet)
-%%
+
+%% Train network
+
 [net3,info] = trainnet(resizedData,pretrainNet,@modelLoss,preopts);
+
 %%
 
 %% Test Images in the Test Set for a specific saved network
 netpre = coder.loadDeepLearningNetwork("resnet2DropoutBlur.mat");
 
-testImage = readimage(resizedImdsTest,26);
+testImage = readimage(resizedImdsTest,54);
 figure
 imshow(testImage);
 C = semanticseg(testImage,netpre);
@@ -373,6 +360,14 @@ function lgraph = createLgraphUsingConnections(layers,connections)
 end
 
 %%
+% Visualise network layers
+layer =16;
+name = netpre.Layers(layer).Name;
 
-lgraph = segnetLayers([256 256],2,2);
-deepNetworkDesigner(lgraph)
+channels = 1:9;
+I = deepDreamImage(netpre,name,channels,'PyramidLevels',1);
+
+
+figure
+I = imtile(I,'ThumbnailSize',[128 128]);
+imshow(I)
